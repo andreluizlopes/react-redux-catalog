@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { addToCart } from '../actions';
 import ProductList from './product-list';
 
 class Catalog extends Component {
+
   render() {
     return (
       <div className="Catalog container">
         <ProductList
           products={this.props.products}
+          addToCart={this.props.addToCart}
         />
       </div>
     );
@@ -16,8 +19,14 @@ class Catalog extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    products: state.allProducts
+    products: state.getProducts.products
   };
 };
 
-export default connect(mapStateToProps)(Catalog);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addToCart: (addProduct) => dispatch(addToCart(addProduct))
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Catalog);

@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import allProducts from './all-products';
+import { getProducts } from './products';
+import { updateCart } from './cart';
 
-const catalogApp = combineReducers({
-  allProducts
+export default combineReducers({
+  getProducts,
+  updateCart
 });
-
-export default catalogApp;

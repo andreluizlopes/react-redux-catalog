@@ -1,19 +1,16 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import App from './App';
 import AppCart from './AppCart';
-import reducer from './reducers';
+
+import { Provider } from 'react-redux';
+import configureStore from './store/configureStore';
+
 import registerServiceWorker from './registerServiceWorker';
 import './assets/css/main.css';
 
-const store = createStore(
-  reducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-
-);
+const store = configureStore();
 const target = document.querySelector('#root');
 
 render(
