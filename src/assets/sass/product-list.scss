@@ -1,0 +1,40 @@
+.product-list {
+  font-family: 'Open Sans', sans-serif;
+  .product {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    .product-image {
+      margin: 0 auto;
+    }
+    .product-title {
+      color:  #313135;
+      font-size: 14px;
+    }
+    .product-price {
+      font-size: 16px;
+      color:  #313135;
+      position: relative;
+      strong {
+        font-size: 24px;
+        font-weight: 700;
+      }
+      &:before {
+        content: '';
+        display: block;
+        width: 15px;
+        height: 2px;
+        background: #dfbd00;
+        position: absolute;
+        left: 50%;
+        margin-left: -7.5px;
+        top: 5px;
+      }
+    }
+    .product-installments {
+      color:  #999999;
+      font-size: 14px;
+      line-height: 2px;
+    }
+  }
+}
