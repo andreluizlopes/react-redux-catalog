@@ -22,3 +22,6 @@ yarn-error.log*
 
 #minified css
 /src/assets/css
+
+#firebasedeploy
+/functions

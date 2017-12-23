@@ -1,7 +1,7 @@
 .product-list {
   font-family: 'Open Sans', sans-serif;
   .product {
-    min-height: 250px;
+    min-height: 260px;
     font-size: 14px;
     font-weight: 400;
     text-align: center;
@@ -12,6 +12,7 @@
       border-bottom: none;
       .product-actions {
         opacity: 1;
+        visibility: visible;
       }
     }
     .product-image {
@@ -49,6 +50,7 @@
   }
   .product-actions {
     opacity: 0;
+    visibility: hidden;
     width: 100%;
     padding-top: 10px;
     font-family: 'Open Sans', sans-serif;

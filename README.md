@@ -1,4 +1,6 @@
 ## Catalog/Cart
+Demo https://react-redux-catalog.firebaseapp.com/ (PWA - service worker offline)
+
 (install dependencies and start)
 ```sh
 npm install
